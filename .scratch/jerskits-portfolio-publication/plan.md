@@ -1,6 +1,6 @@
 # Walkthrough y publicación de Jerskits
 
-Estado: acuerdo completo aceptado; implementación y publicación autorizadas.
+Estado: video, reproductor, README, repositorio público y demo de Vercel publicados y verificados. Pendiente únicamente el permiso de la integración de GitHub para desplegar automáticamente desde `main`.
 
 ## Objetivo confirmado
 
