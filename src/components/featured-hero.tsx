@@ -68,30 +68,35 @@ export function FeaturedHero() {
           <small>{slide.motto}</small>
         </span>
       </div>
-      <p className="hero-kicker">
-        {t("official")} · {product.season}
-      </p>
-      <h1
-        id="hero-title"
-        aria-label={product.team.toUpperCase()}
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        <span className="hero-title-parts" aria-hidden="true">
-          {slide.titleParts.map((part) => (
-            <span key={part}>{part}</span>
-          ))}
-        </span>
-      </h1>
-      <img
-        key={slide.id}
-        className="hero-shirt"
-        src={slide.image}
-        alt={`${product.team} ${t(`${product.kind}Shirt`)}`}
-        width="1000"
-        height="1000"
-        fetchPriority={index === 0 ? "high" : "auto"}
-      />
+      <div className="hero-display">
+        <p className="hero-kicker">
+          {t("official")} · {product.season}
+        </p>
+        <h1
+          id="hero-title"
+          aria-label={product.team.toUpperCase()}
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <span className="hero-title-parts" aria-hidden="true">
+            {slide.titleParts.map((part) => (
+              <span key={part}>{part}</span>
+            ))}
+          </span>
+          <span className="hero-title-full" aria-hidden="true">
+            {product.team.toUpperCase()}
+          </span>
+        </h1>
+        <img
+          key={slide.id}
+          className="hero-shirt"
+          src={slide.image}
+          alt={`${product.team} ${t(`${product.kind}Shirt`)}`}
+          width="1000"
+          height="1000"
+          fetchPriority={index === 0 ? "high" : "auto"}
+        />
+      </div>
       <div className="hero-story">
         <span className="story-mark" aria-hidden="true">
           {slide.badge}
