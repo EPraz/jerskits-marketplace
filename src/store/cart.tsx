@@ -7,14 +7,10 @@ import {
 } from "react";
 import { productById, sizes, type Size } from "../catalog/products";
 import { readStored, writeStored } from "./browser-storage";
+import { normalizeQuantity } from "../catalog/quantity-policy";
 
 export type CartLine = { productId: string; size: Size; quantity: number };
 const storageKey = "jerskits.cart.v1";
-const boundQuantity = (quantity: number) =>
-  Math.max(
-    1,
-    Math.min(5, Math.floor(Number.isFinite(quantity) ? quantity : 1)),
-  );
 
 function loadCart(): CartLine[] {
   try {
@@ -37,12 +33,14 @@ function loadCart(): CartLine[] {
         (line) => line.productId === item.productId && line.size === item.size,
       );
       if (existing)
-        existing.quantity = boundQuantity(existing.quantity + item.quantity);
+        existing.quantity = normalizeQuantity(
+          existing.quantity + item.quantity,
+        );
       else
         lines.push({
           productId: item.productId,
           size: item.size,
-          quantity: boundQuantity(item.quantity),
+          quantity: normalizeQuantity(item.quantity),
         });
     }
     return lines;
@@ -74,17 +72,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
       return existing
         ? previous.map((line) =>
             line === existing
-              ? { ...line, quantity: boundQuantity(line.quantity + quantity) }
+              ? {
+                  ...line,
+                  quantity: normalizeQuantity(line.quantity + quantity),
+                }
               : line,
           )
-        : [...previous, { productId, size, quantity: boundQuantity(quantity) }];
+        : [
+            ...previous,
+            { productId, size, quantity: normalizeQuantity(quantity) },
+          ];
     });
   }
   function changeQuantity(productId: string, size: Size, quantity: number) {
     setLines((previous) =>
       previous.map((line) =>
         line.productId === productId && line.size === size
-          ? { ...line, quantity: boundQuantity(quantity) }
+          ? { ...line, quantity: normalizeQuantity(quantity) }
           : line,
       ),
     );

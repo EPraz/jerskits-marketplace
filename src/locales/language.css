@@ -5,26 +5,26 @@
   letter-spacing: 0.8px;
   font-weight: 600;
   min-height: 44px;
-  padding: 8px 4px;
+  padding: var(--space-2) var(--space-1);
   color: var(--ink);
   cursor: pointer;
 }
 .header-actions {
-  gap: 12px;
+  gap: var(--space-3);
 }
 @media (max-width: 600px) {
   .header-actions {
-    gap: 2px;
+    gap: var(--space-1);
   }
   .header-search {
     display: none;
   }
   .language-switch select {
     font-size: 9px;
-    padding: 8px 2px;
+    padding: var(--space-2) var(--space-1);
   }
   .site-header {
-    gap: 4px;
+    gap: var(--space-1);
   }
   .manifesto h2 {
     font-size: clamp(38px, 10vw, 57px);

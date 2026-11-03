@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { sizes, type Product, type Size } from "../catalog/products";
 import { useCart } from "../store/cart";
+import {
+  MAX_VARIANT_QUANTITY,
+  normalizeQuantity,
+} from "../catalog/quantity-policy";
 
 export function PurchaseControls({ product }: { product: Product }) {
   const { t } = useTranslation();
@@ -20,8 +24,9 @@ export function PurchaseControls({ product }: { product: Product }) {
         ?.quantity ?? 0;
     addLine(product.id, size, quantity);
     setNotice({
-      key: existing + quantity > 5 ? "limitReached" : "added",
-      count: Math.min(5, existing + quantity),
+      key:
+        existing + quantity > MAX_VARIANT_QUANTITY ? "limitReached" : "added",
+      count: normalizeQuantity(existing + quantity),
     });
   }
   return (
@@ -54,16 +59,11 @@ export function PurchaseControls({ product }: { product: Product }) {
           <input
             type="number"
             min="1"
-            max="5"
+            max={MAX_VARIANT_QUANTITY}
             step="1"
             value={quantity}
             onChange={(event) =>
-              setQuantity(
-                Math.max(
-                  1,
-                  Math.min(5, Math.floor(Number(event.target.value) || 1)),
-                ),
-              )
+              setQuantity(normalizeQuantity(Number(event.target.value)))
             }
           />
         </label>
@@ -75,7 +75,12 @@ export function PurchaseControls({ product }: { product: Product }) {
         {notice && (
           <>
             <Check size={16} />
-            <span>{t(notice.key, { count: notice.count })}</span>
+            <span>
+              {t(notice.key, {
+                count: notice.count,
+                max: MAX_VARIANT_QUANTITY,
+              })}
+            </span>
             <Link to="/cart">{t("viewBag")}</Link>
           </>
         )}

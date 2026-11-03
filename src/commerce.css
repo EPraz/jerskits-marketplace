@@ -9,7 +9,7 @@
   height: 16px;
   background: var(--ink);
   border-radius: 50%;
-  color: white;
+  color: var(--white);
   font-size: 9px;
   display: flex;
   align-items: center;
@@ -23,45 +23,45 @@
 .size-selector legend {
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-3);
 }
 .size-selector > div {
   display: flex;
-  gap: 9px;
+  gap: var(--space-2);
 }
 .size-selector button {
   border: 1px solid var(--line);
-  background: white;
+  background: var(--white);
   min-width: 46px;
   min-height: 44px;
-  padding: 10px;
+  padding: var(--space-3);
   font-size: 12px;
 }
 .size-selector button[aria-pressed="true"] {
   background: var(--ink);
-  color: white;
+  color: var(--white);
   border-color: var(--ink);
 }
 .size-selector button:disabled {
-  color: #969da2;
+  color: var(--text-disabled);
   text-decoration: line-through;
   background: linear-gradient(
     to top right,
     transparent 48%,
-    #ccd0d2 49%,
-    #ccd0d2 50%,
+    var(--border-disabled) 49%,
+    var(--border-disabled) 50%,
     transparent 51%
   );
 }
 .size-selector > p {
   font-size: 10px;
   color: var(--muted);
-  margin-top: 12px;
+  margin-top: var(--space-3);
 }
 .purchase-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 24px;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
 }
 .purchase-actions .button {
   flex: 1;
@@ -74,20 +74,20 @@
   width: 70px;
   height: 50px;
   border: 1px solid var(--line);
-  background: white;
-  padding: 10px;
+  background: var(--white);
+  padding: var(--space-3);
   text-align: center;
   font-size: 13px;
 }
 .purchase-feedback {
   min-height: 46px;
   font-size: 11px;
-  color: #275b43;
+  color: var(--success);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   flex-wrap: wrap;
-  padding: 10px 0;
+  padding: var(--space-3) 0;
 }
 .purchase-feedback > a {
   margin-left: auto;
@@ -99,12 +99,12 @@
   color: var(--muted);
   display: flex;
   align-items: center;
-  gap: 9px;
-  margin-bottom: 24px;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
 }
 .commerce-page {
-  padding-top: 32px;
-  padding-bottom: 80px;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-20);
 }
 .commerce-page .page-heading h1 {
   font-size: 44px;
@@ -117,15 +117,15 @@
 }
 .cart-line {
   display: flex;
-  padding: 24px 0;
-  gap: 24px;
+  padding: var(--space-6) 0;
+  gap: var(--space-6);
   border-top: 1px solid var(--line);
 }
 .cart-image {
   width: 140px;
   flex-shrink: 0;
   background: var(--paper);
-  padding: 12px;
+  padding: var(--space-3);
 }
 .cart-image img {
   width: 100%;
@@ -135,7 +135,7 @@
 }
 .cart-line-info {
   flex: 1;
-  padding-top: 10px;
+  padding-top: var(--space-3);
   min-width: 0;
 }
 .cart-line-info > .eyebrow {
@@ -145,12 +145,12 @@
 .cart-line-info h2 {
   font-size: 19px;
   letter-spacing: -0.5px;
-  margin: 8px 0;
+  margin: var(--space-2) 0;
 }
 .cart-line-info > p:not(.eyebrow) {
   font-size: 11px;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin-bottom: var(--space-4);
 }
 .cart-line-info .quantity-field input {
   height: 38px;
@@ -158,7 +158,7 @@
   font-size: 12px;
 }
 .cart-line-end {
-  padding-top: 12px;
+  padding-top: var(--space-3);
   text-align: right;
   display: flex;
   align-items: flex-end;
@@ -177,35 +177,35 @@
   font-size: 10px;
   color: var(--muted);
   border-top: 1px solid var(--line);
-  padding-top: 18px;
+  padding-top: var(--space-5);
 }
 .order-summary {
-  background: #f6f7f6;
-  padding: 30px;
+  background: var(--surface-summary);
+  padding: var(--space-8);
 }
 .order-summary h2 {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.4px;
-  margin-bottom: 25px;
+  margin-bottom: var(--space-6);
 }
 .summary-row {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: var(--space-4);
   font-size: 12px;
-  margin-bottom: 18px;
+  margin-bottom: var(--space-5);
 }
 .summary-row > span:first-child {
   color: var(--muted);
 }
 .summary-total {
-  padding-top: 22px;
-  border-top: 1px solid #daddde;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-summary);
   font-size: 18px;
   font-weight: 600;
-  margin-top: 24px;
-  margin-bottom: 10px;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
 }
 .summary-total > span:first-child {
   color: var(--ink);
@@ -213,7 +213,7 @@
 .price-note {
   font-size: 10px;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: var(--space-7);
 }
 .full-width {
   width: 100%;
@@ -224,18 +224,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7px;
-  margin-top: 17px;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
   line-height: 1.6;
 }
 .summary-items {
-  margin-bottom: 25px;
+  margin-bottom: var(--space-6);
 }
 .summary-items > div {
   display: flex;
-  gap: 12px;
+  gap: var(--space-3);
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-4);
 }
 .summary-items img {
   width: 52px;
@@ -255,7 +255,7 @@
   font-size: 9px;
   color: var(--muted);
   display: block;
-  margin-top: 5px;
+  margin-top: var(--space-1);
 }
 @media (max-width: 900px) {
   .commerce-grid {
@@ -269,10 +269,10 @@
     height: 130px;
   }
   .cart-line {
-    gap: 15px;
+    gap: var(--space-4);
   }
   .order-summary {
-    padding: 24px;
+    padding: var(--space-6);
   }
   .cart-line-info h2 {
     font-size: 16px;
@@ -280,15 +280,15 @@
 }
 @media (max-width: 600px) {
   .commerce-page {
-    padding-top: 20px;
-    padding-bottom: 44px;
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-11);
   }
   .commerce-page .page-heading h1 {
     font-size: 36px;
   }
   .commerce-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: var(--space-7);
   }
   .cart-image {
     width: 95px;
@@ -297,8 +297,8 @@
     height: 120px;
   }
   .cart-line {
-    gap: 15px;
-    padding: 20px 0;
+    gap: var(--space-4);
+    padding: var(--space-5) 0;
   }
   .cart-line-info h2 {
     font-size: 16px;
@@ -307,14 +307,14 @@
     font-size: 12px;
   }
   .order-summary {
-    padding: 24px;
+    padding: var(--space-6);
   }
   .size-selector button {
     min-width: 44px;
   }
   .purchase-actions .button {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
   }
   .purchase-feedback {
     font-size: 10px;

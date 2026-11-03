@@ -1,14 +1,14 @@
 .checkout-steps {
   display: flex;
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 var(--space-10);
   padding: 0;
-  gap: 25px;
+  gap: var(--space-6);
   flex-wrap: wrap;
 }
 .checkout-steps li {
   display: flex;
-  gap: 8px;
+  gap: var(--space-2);
   align-items: center;
   font-size: 10px;
   color: var(--muted);
@@ -29,16 +29,16 @@
 }
 .checkout-steps li.current > span {
   background: var(--ink);
-  color: white;
+  color: var(--white);
   border-color: var(--ink);
 }
 .form-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: var(--space-5);
   border-top: 1px solid var(--line);
-  padding: 25px 0;
+  padding: var(--space-6) 0;
 }
 .form-heading h2 {
   font-size: 18px;
@@ -48,32 +48,32 @@
 .demo-fill {
   display: flex;
   align-items: center;
-  gap: 7px;
-  background: #eef1ef;
+  gap: var(--space-2);
+  background: var(--surface-action);
   font-size: 10px;
-  padding: 11px 13px;
+  padding: var(--space-3) var(--space-3);
   min-height: 40px;
 }
 .demo-fill:hover {
-  background: #e0e6e2;
+  background: var(--surface-action-hover);
 }
 .form-fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 18px;
+  gap: var(--space-5) var(--space-5);
 }
 .form-field label {
   display: block;
   font-size: 11px;
   font-weight: 600;
-  margin-bottom: 9px;
+  margin-bottom: var(--space-2);
 }
 .form-field input {
   height: 48px;
   border: 1px solid var(--line);
   width: 100%;
-  padding: 12px 14px;
-  background: white;
+  padding: var(--space-3) var(--space-4);
+  background: var(--white);
   font-size: 13px;
 }
 .form-field input:focus {
@@ -90,25 +90,25 @@
 .field-error {
   font-size: 10px;
   color: var(--red);
-  margin-top: 8px;
+  margin-top: var(--space-2);
   line-height: 1.5;
 }
 .form-note {
   font-size: 10px;
   color: var(--muted);
   line-height: 1.7;
-  margin: 20px 0 25px;
+  margin: var(--space-5) 0 var(--space-6);
 }
 .demo-purchase-copy {
   font-size: 10px;
   color: var(--muted);
   line-height: 1.7;
-  margin-top: 12px;
+  margin-top: var(--space-3);
   text-align: center;
 }
 .confirmation-page {
-  padding-top: 65px;
-  padding-bottom: 70px;
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-18);
   max-width: 660px;
 }
 .confirmation-intro {
@@ -117,20 +117,20 @@
 .confirmation-check {
   width: 64px;
   height: 64px;
-  border: 1px solid #cdd6d0;
+  border: 1px solid var(--border-success);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin: 0 auto 24px;
-  background: #f2f6f3;
-  color: #275b43;
+  margin: 0 auto var(--space-6);
+  background: var(--surface-success);
+  color: var(--success);
 }
 .confirmation-intro h1 {
   font-size: 44px;
   letter-spacing: -1.8px;
   line-height: 1.15;
-  margin: 15px 0;
+  margin: var(--space-4) 0;
 }
 .confirmation-intro > p:not(.eyebrow) {
   font-size: 13px;
@@ -143,47 +143,47 @@
   display: block;
   font-size: 10px;
   color: var(--muted);
-  margin: 28px 0;
+  margin: var(--space-7) 0;
 }
 .order-reference strong {
   color: var(--ink);
   font-weight: 600;
-  margin-left: 12px;
+  margin-left: var(--space-3);
   letter-spacing: 1px;
 }
 .confirmation-actions {
   text-align: center;
-  margin-top: 25px;
+  margin-top: var(--space-6);
 }
 .confirmation-actions > p {
   font-size: 10px;
   color: var(--muted);
   line-height: 1.7;
   max-width: 300px;
-  margin: 16px auto;
+  margin: var(--space-4) auto;
 }
 @media (max-width: 600px) {
   .checkout-steps {
-    gap: 16px;
-    margin-bottom: 30px;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
   }
   .checkout-steps li {
     font-size: 9px;
   }
   .form-heading {
-    gap: 10px;
-    padding: 20px 0;
+    gap: var(--space-3);
+    padding: var(--space-5) 0;
   }
   .form-heading h2 {
     font-size: 16px;
   }
   .demo-fill {
-    padding: 10px;
+    padding: var(--space-3);
     font-size: 9px;
-    gap: 5px;
+    gap: var(--space-1);
   }
   .form-fields {
-    gap: 18px 14px;
+    gap: var(--space-5) var(--space-4);
   }
   .form-field label {
     font-size: 10px;
@@ -192,8 +192,8 @@
     font-size: 16px;
   }
   .confirmation-page {
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-top: var(--space-11);
+    padding-bottom: var(--space-11);
   }
   .confirmation-intro h1 {
     font-size: 34px;

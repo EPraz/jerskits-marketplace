@@ -11,6 +11,12 @@ import { useTranslation } from "react-i18next";
 import { products } from "../catalog/products";
 import { ProductCard } from "../components/product-card";
 
+const benefits = [
+  { Icon: Shirt, titleKey: "authentic", copyKey: "authenticCopy" },
+  { Icon: Truck, titleKey: "delivery", copyKey: "deliveryCopy" },
+  { Icon: Globe2, titleKey: "guest", copyKey: "guestCopy" },
+] as const;
+
 export function Home() {
   const { t } = useTranslation();
   return (
@@ -69,22 +75,15 @@ export function Home() {
         </div>
       </section>
       <section className="benefits" aria-label={t("authentic")}>
-        {[
-          [Shirt, "authentic", "authenticCopy"],
-          [Truck, "delivery", "deliveryCopy"],
-          [Globe2, "guest", "guestCopy"],
-        ].map(([Icon, title, copy]) => {
-          const Symbol = Icon as typeof Shirt;
-          return (
-            <div key={String(title)}>
-              <Symbol size={26} strokeWidth={1.3} />
-              <div>
-                <h2>{t(String(title))}</h2>
-                <p>{t(String(copy))}</p>
-              </div>
+        {benefits.map(({ Icon, titleKey, copyKey }) => (
+          <div key={titleKey}>
+            <Icon size={26} strokeWidth={1.3} />
+            <div>
+              <h2>{t(titleKey)}</h2>
+              <p>{t(copyKey)}</p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </section>
       <section className="section-wrap featured" id="featured">
         <div className="section-heading">

@@ -85,7 +85,8 @@ export const es: Record<keyof typeof en, string> = {
   addBag: "Añadir a la bolsa",
   viewBag: "Ver bolsa",
   added: "En tu bolsa: {{count}}",
-  limitReached: "Límite alcanzado: 5 por talla. Tu bolsa tiene 5.",
+  limitReached:
+    "Límite alcanzado: {{max}} por talla. Tu bolsa tiene {{count}}.",
   orderSummary: "Resumen del pedido",
   subtotal: "Subtotal",
   total: "Total",
@@ -101,7 +102,7 @@ export const es: Record<keyof typeof en, string> = {
   bagCopy: "Buenas elecciones. Grandes colores.",
   quantityFor: "Cantidad de {{team}} {{size}}",
   removeItem: "Eliminar {{team}} {{size}}",
-  bagLimit: "Hasta 5 de cada talla. Toda la pasión que puedas llevar.",
+  bagLimit: "Hasta {{max}} de cada talla. Toda la pasión que puedas llevar.",
   backBag: "Volver a la bolsa",
   shippingDetails: "Datos de envío",
   confirmation: "Confirmación",

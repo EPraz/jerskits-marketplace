@@ -83,7 +83,8 @@ export const ptBR: Record<keyof typeof en, string> = {
   addBag: "Adicionar à sacola",
   viewBag: "Ver sacola",
   added: "Na sua sacola: {{count}}",
-  limitReached: "Limite atingido: 5 por tamanho. Sua sacola tem 5.",
+  limitReached:
+    "Limite atingido: {{max}} por tamanho. Sua sacola tem {{count}}.",
   orderSummary: "Resumo do pedido",
   subtotal: "Subtotal",
   total: "Total",
@@ -99,7 +100,8 @@ export const ptBR: Record<keyof typeof en, string> = {
   bagCopy: "Boas escolhas. Grandes cores.",
   quantityFor: "Quantidade de {{team}} {{size}}",
   removeItem: "Remover {{team}} {{size}}",
-  bagLimit: "Até 5 de cada tamanho. Toda a paixão que você puder carregar.",
+  bagLimit:
+    "Até {{max}} de cada tamanho. Toda a paixão que você puder carregar.",
   backBag: "Voltar à sacola",
   shippingDetails: "Dados de entrega",
   confirmation: "Confirmação",

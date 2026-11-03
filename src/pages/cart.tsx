@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { priceLabel, productById } from "../catalog/products";
 import { useCart } from "../store/cart";
 import { OrderSummary } from "../components/order-summary";
+import { MAX_VARIANT_QUANTITY } from "../catalog/quantity-policy";
 
 export function EmptyCart() {
   const { t } = useTranslation();
@@ -70,7 +71,7 @@ export function CartPage() {
                     <input
                       type="number"
                       min="1"
-                      max="5"
+                      max={MAX_VARIANT_QUANTITY}
                       step="1"
                       value={line.quantity}
                       onChange={(event) =>
@@ -101,7 +102,9 @@ export function CartPage() {
               </article>
             );
           })}
-          <p className="cart-limit-note">{t("bagLimit")}</p>
+          <p className="cart-limit-note">
+            {t("bagLimit", { max: MAX_VARIANT_QUANTITY })}
+          </p>
         </section>
         <OrderSummary lines={lines} checkoutLink />
       </div>
