@@ -4,11 +4,11 @@
 
 **Blocked by:** 01: Descubrir una primera camiseta.
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] El catálogo contiene entre 12 y 16 camisetas de clubes y selecciones, con imágenes y precios.
-- [ ] Se busca por camiseta o equipo y se combinan filtros por equipo, talla y precio.
-- [ ] Se ordena por destacados o precio ascendente/descendente.
-- [ ] Contador, estado sin coincidencias y limpieza de filtros funcionan en móvil y escritorio.
-- [ ] Las pruebas de navegador verifican búsqueda, filtros, orden y recuperación.
+- [x] El catálogo contiene entre 12 y 16 camisetas de clubes y selecciones, con imágenes y precios.
+- [x] Se busca por camiseta o equipo y se combinan filtros por equipo, talla y precio.
+- [x] Se ordena por destacados o precio ascendente/descendente.
+- [x] Contador, estado sin coincidencias y limpieza de filtros funcionan en móvil y escritorio.
+- [x] Las pruebas de navegador verifican búsqueda, filtros, orden y recuperación.
 

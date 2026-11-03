@@ -4,12 +4,12 @@
 
 **Blocked by:** 01: Descubrir una primera camiseta.
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] Se seleccionan talla S–XXL y cantidad, y las tallas agotadas están deshabilitadas.
-- [ ] Las adiciones de la misma variante se agrupan; tallas diferentes crean líneas diferentes.
-- [ ] El máximo acumulado es cinco unidades por variante, incluso con adiciones repetidas.
-- [ ] Se editan cantidades y eliminan líneas, con subtotales y total correctos en USD y envío gratuito.
-- [ ] El carrito persiste al recargar y tiene un estado vacío recuperable.
-- [ ] Las pruebas de navegador verifican disponibilidad, límite, edición, eliminación y persistencia.
+- [x] Se seleccionan talla S–XXL y cantidad, y las tallas agotadas están deshabilitadas.
+- [x] Las adiciones de la misma variante se agrupan; tallas diferentes crean líneas diferentes.
+- [x] El máximo acumulado es cinco unidades por variante, incluso con adiciones repetidas.
+- [x] Se editan cantidades y eliminan líneas, con subtotales y total correctos en USD y envío gratuito.
+- [x] El carrito persiste al recargar y tiene un estado vacío recuperable.
+- [x] Las pruebas de navegador verifican disponibilidad, límite, edición, eliminación y persistencia.
 

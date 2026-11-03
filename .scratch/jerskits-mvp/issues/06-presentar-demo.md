@@ -4,11 +4,11 @@
 
 **Blocked by:** 05: Comprar en los tres idiomas.
 
-**Status:** ready-for-agent
+**Status:** resolved
 
-- [ ] Se puede reiniciar la demo y repetir el recorrido desde un estado inicial.
-- [ ] La versión de producción estática se genera y se puede previsualizar localmente.
-- [ ] Se documenta instalación, desarrollo, build, previsualización y fallback de rutas en alojamiento estático.
-- [ ] Se verifica el recorrido integrado, navegación por teclado, estados vacíos y fidelidad visual en móvil y escritorio.
-- [ ] La entrega no publica la aplicación en una cuenta ni añade backend, pagos o autenticación.
+- [x] Se puede reiniciar la demo y repetir el recorrido desde un estado inicial.
+- [x] La versión de producción estática se genera y se puede previsualizar localmente.
+- [x] Se documenta instalación, desarrollo, build, previsualización y fallback de rutas en alojamiento estático.
+- [x] Se verifica el recorrido integrado, navegación por teclado, estados vacíos y fidelidad visual en móvil y escritorio.
+- [x] La entrega no publica la aplicación en una cuenta ni añade backend, pagos o autenticación.
 
