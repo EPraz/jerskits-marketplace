@@ -1,0 +1,48 @@
+.manifesto-number {
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: no-repeat right center/contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 450'%3E%3Ctext x='0' y='360' font-family='Impact,sans-serif' font-weight='bold' font-style='italic' font-size='430' fill='%23ffffff' fill-opacity='.04'%3E90%3C/text%3E%3C/svg%3E");
+}
+.reset-demo {
+  background: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+  min-height: 24px;
+}
+.reset-demo:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+.footer-bottom {
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .hero-shirt {
+    height: 330px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+  .footer-bottom > span:nth-child(2) {
+    flex: 1;
+    text-align: right;
+    max-width: 230px;
+  }
+  .reset-demo {
+    font-size: 9px;
+  }
+  .manifesto-number {
+    width: 70%;
+    right: -15%;
+  }
+}

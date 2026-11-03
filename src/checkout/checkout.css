@@ -1,0 +1,204 @@
+.checkout-steps {
+  display: flex;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.checkout-steps li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 10px;
+  color: var(--muted);
+}
+.checkout-steps li > span {
+  font-size: 8px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-steps li.current {
+  color: var(--ink);
+  font-weight: 600;
+}
+.checkout-steps li.current > span {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+.form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+}
+.form-heading h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.demo-fill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #eef1ef;
+  font-size: 10px;
+  padding: 11px 13px;
+  min-height: 40px;
+}
+.demo-fill:hover {
+  background: #e0e6e2;
+}
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 18px;
+}
+.form-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+.form-field input {
+  height: 48px;
+  border: 1px solid var(--line);
+  width: 100%;
+  padding: 12px 14px;
+  background: white;
+  font-size: 13px;
+}
+.form-field input:focus {
+  border-color: var(--ink);
+}
+.form-field input[aria-invalid="true"] {
+  border-color: var(--red);
+}
+.field-name,
+.field-email,
+.field-address {
+  grid-column: 1/-1;
+}
+.field-error {
+  font-size: 10px;
+  color: var(--red);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.form-note {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 20px 0 25px;
+}
+.demo-purchase-copy {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-top: 12px;
+  text-align: center;
+}
+.confirmation-page {
+  padding-top: 65px;
+  padding-bottom: 70px;
+  max-width: 660px;
+}
+.confirmation-intro {
+  text-align: center;
+}
+.confirmation-check {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #cdd6d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  background: #f2f6f3;
+  color: #275b43;
+}
+.confirmation-intro h1 {
+  font-size: 44px;
+  letter-spacing: -1.8px;
+  line-height: 1.15;
+  margin: 15px 0;
+}
+.confirmation-intro > p:not(.eyebrow) {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 330px;
+  margin: auto;
+}
+.order-reference {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 28px 0;
+}
+.order-reference strong {
+  color: var(--ink);
+  font-weight: 600;
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+.confirmation-actions {
+  text-align: center;
+  margin-top: 25px;
+}
+.confirmation-actions > p {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 300px;
+  margin: 16px auto;
+}
+@media (max-width: 600px) {
+  .checkout-steps {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .checkout-steps li {
+    font-size: 9px;
+  }
+  .form-heading {
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .form-heading h2 {
+    font-size: 16px;
+  }
+  .demo-fill {
+    padding: 10px;
+    font-size: 9px;
+    gap: 5px;
+  }
+  .form-fields {
+    gap: 18px 14px;
+  }
+  .form-field label {
+    font-size: 10px;
+  }
+  .form-field input {
+    font-size: 16px;
+  }
+  .confirmation-page {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .confirmation-intro h1 {
+    font-size: 34px;
+  }
+  .confirmation-intro > p:not(.eyebrow) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,32 @@
+.language-switch select {
+  border: 0;
+  background: transparent;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 8px 4px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.header-actions {
+  gap: 12px;
+}
+@media (max-width: 600px) {
+  .header-actions {
+    gap: 2px;
+  }
+  .header-search {
+    display: none;
+  }
+  .language-switch select {
+    font-size: 9px;
+    padding: 8px 2px;
+  }
+  .site-header {
+    gap: 4px;
+  }
+  .manifesto h2 {
+    font-size: clamp(38px, 10vw, 57px);
+  }
+}
