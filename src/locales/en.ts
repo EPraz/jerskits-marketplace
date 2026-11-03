@@ -1,4 +1,8 @@
 export const en = {
+  previousShirt: "Previous shirt",
+  nextShirt: "Next shirt",
+  featuredControls: "Featured shirt controls",
+  featuredCarousel: "Featured shirts",
   resetDemo: "Reset demo",
   language: "Language",
   brandHome: "Jerskits home",

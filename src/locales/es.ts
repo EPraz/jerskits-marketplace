@@ -1,6 +1,10 @@
 import type { en } from "./en";
 
 export const es: Record<keyof typeof en, string> = {
+  previousShirt: "Camiseta anterior",
+  nextShirt: "Siguiente camiseta",
+  featuredControls: "Controles de camisetas destacadas",
+  featuredCarousel: "Camisetas destacadas",
   resetDemo: "Reiniciar demo",
   language: "Idioma",
   brandHome: "Inicio de Jerskits",

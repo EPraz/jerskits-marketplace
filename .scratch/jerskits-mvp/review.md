@@ -47,3 +47,12 @@ Resumen por eje: Standards, tres hallazgos no bloqueantes resueltos; Spec, un ha
 - Las instrucciones de ejecución y producción están en el README del proyecto.
 - La aplicación se entrega localmente, lista para alojamiento estático. No se ha publicado en una cuenta externa.
 - El host de navegador visible no estaba disponible; la verificación se realizó mediante las pruebas de navegador y capturas locales de producción.
+
+## Iteración visual solicitada después del MVP
+
+- El usuario pidió reducir el espacio en blanco del catálogo y probar el hero como primera pantalla completa sin la franja blanca del menú.
+- La portada ahora ocupa el viewport, con navegación superpuesta sobre el fondo oscuro. Las páginas interiores mantienen su navegación sobre fondo claro; la cabecera del catálogo es más compacta.
+- Los controles manuales anterior/siguiente recorren Liverpool, Barcelona y Brasil, actualizando camiseta, título, identificación del equipo y enlace al detalle. No hay rotación automática.
+- Las imágenes adicionales de Barcelona y Brasil tienen transparencia real y créditos propios. Se conservaron las otras camisetas y las reglas de compra del MVP.
+- Verificación de esta iteración: tipos y build correctos; suite completa de **28 pruebas aprobadas** en escritorio y móvil, incluida la alternancia, el enlace al producto seleccionado y el uso del control con teclado.
+- Se revisaron capturas de las tres portadas y del catálogo a 1440, 2048, 390 y 320 píxeles. Las capturas enlazadas arriba muestran la nueva versión.

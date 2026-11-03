@@ -1,0 +1,32 @@
+[
+  {
+    "id": "barcelona-hero",
+    "productId": "barcelona",
+    "team": "FC Barcelona",
+    "season": "2024/25",
+    "design": "home stadium angled packshot",
+    "filename": "barcelona-hero.png",
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0570/1609/0802/files/AURORA_FN8797-456_PHSFH001-2000_clipped_rev_1.png?v=1722888302",
+    "sourcePage": "https://soccerpost.com/products/nike-barcelona-24-25-home-jersey-deep-royal-blue-noble-red-club-gold-fn8797-456",
+    "credit": "Nike / Soccer Post product photography, FN8797-456. Local portfolio demo; no reuse license asserted.",
+    "transparent": true,
+    "width": 1000,
+    "height": 1000,
+    "downloadUrl": "https://cdn.shopify.com/s/files/1/0570/1609/0802/files/AURORA_FN8797-456_PHSFH001-2000_clipped_rev_1.png?v=1722888302&width=1000"
+  },
+  {
+    "id": "brazil-hero",
+    "productId": "brazil",
+    "team": "Brazil",
+    "season": "2024",
+    "design": "home stadium angled packshot",
+    "filename": "brazil-hero.png",
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0570/1609/0802/files/AURORA_FJ4284-706_PHSFH001-2000_clipped_rev_1.png?v=1712339744",
+    "sourcePage": "https://soccerpost.com/products/nike-brazil-2024-home-jersey-dynamic-yellow-lemon-chiffon-green-spark-fj4284-706",
+    "credit": "Nike / Soccer Post product photography, FJ4284-706. Local portfolio demo; no reuse license asserted.",
+    "transparent": true,
+    "width": 1000,
+    "height": 1000,
+    "downloadUrl": "https://cdn.shopify.com/s/files/1/0570/1609/0802/files/AURORA_FJ4284-706_PHSFH001-2000_clipped_rev_1.png?v=1712339744&width=1000"
+  }
+]

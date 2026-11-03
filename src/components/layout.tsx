@@ -13,6 +13,8 @@ export function Layout() {
   const count = lines.reduce((total, line) => total + line.quantity, 0);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isCatalog = location.pathname === "/catalog";
   const firstVisit = useRef(true);
   useEffect(() => {
     setMenuOpen(false);
@@ -31,12 +33,20 @@ export function Layout() {
       <a className="skip-link" href="#content">
         {t("skip")}
       </a>
-      <div className="announcement">
-        <span>{t("tagline")}</span>
-        <span>{t("demo")}</span>
-        <span>{t("established")}</span>
-      </div>
-      <header className="site-header">
+      {!isHome && (
+        <div
+          className={
+            isCatalog ? "announcement announcement--compact" : "announcement"
+          }
+        >
+          <span>{t("tagline")}</span>
+          <span>{t("demo")}</span>
+          <span>{t("established")}</span>
+        </div>
+      )}
+      <header
+        className={`site-header${isHome ? " site-header--overlay" : isCatalog ? " site-header--compact" : ""}`}
+      >
         <button
           className="icon-button mobile-menu"
           aria-label={menuOpen ? t("close") : t("menu")}

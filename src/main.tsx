@@ -12,6 +12,7 @@ import "./commerce.css";
 import "./checkout/checkout.css";
 import "./locales/language.css";
 import "./presentation.css";
+import "./components/featured-hero.css";
 import { Layout } from "./components/layout";
 import { Home } from "./pages/home";
 import { Catalog } from "./pages/catalog";

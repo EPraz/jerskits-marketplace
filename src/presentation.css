@@ -25,11 +25,6 @@
   align-items: center;
 }
 @media (max-width: 600px) {
-  .hero-shirt {
-    height: 330px;
-  }
-}
-@media (max-width: 600px) {
   .footer-bottom {
     flex-wrap: wrap;
   }

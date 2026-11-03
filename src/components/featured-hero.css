@@ -1,0 +1,413 @@
+.site-header--overlay {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 80px;
+  color: var(--white);
+  background: transparent;
+  border-bottom: 1px solid #ffffff18;
+}
+.site-header--overlay .main-nav a.active:after {
+  background: var(--white);
+}
+.site-header--overlay .language-switch select {
+  color: inherit;
+}
+.site-header--overlay .language-switch option {
+  color: var(--ink);
+  background: var(--white);
+}
+.site-header--overlay .bag-count {
+  background: var(--white);
+  color: var(--ink);
+}
+.hero {
+  --hero-badge: #a71c2b;
+  --hero-shade: #232e34;
+  height: 100svh;
+  min-height: 640px;
+  background: var(--surface-hero);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 112px 4% 0;
+}
+.hero[data-team="barcelona"] {
+  --hero-badge: #85394f;
+  --hero-shade: #192b40;
+}
+.hero[data-team="brazil"] {
+  --hero-badge: #2c654e;
+  --hero-shade: #243c34;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(155deg, transparent 25%, #131a1d6e 25.1%, transparent 55%),
+    linear-gradient(31deg, #101719 6%, transparent 54%),
+    repeating-linear-gradient(135deg, transparent 0 40px, #ffffff05 41px 43px),
+    linear-gradient(115deg, #333b40, #3c464a 65%, var(--hero-shade));
+}
+.hero-lines {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  height: 100%;
+  width: 45%;
+  transform: skew(-24deg);
+  border-left: 1px solid #ffffff15;
+  border-right: 180px solid #ffffff03;
+  z-index: -1;
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-hero-meta);
+}
+.hero-top > span:first-child {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+.live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-live);
+}
+.hero-team {
+  position: absolute;
+  top: 22%;
+  left: 4%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hero-team small {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.team-emblem {
+  width: 35px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  background: var(--hero-badge);
+  clip-path: polygon(0 0, 100% 0, 90% 75%, 50% 100%, 10% 75%);
+}
+.hero-kicker {
+  position: absolute;
+  top: 36%;
+  left: 4%;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.hero h1 {
+  position: absolute;
+  left: 3.5%;
+  top: 40%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(120px, 24vw, 400px);
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 0.9;
+  width: 95%;
+}
+.hero-shirt {
+  position: absolute;
+  left: 27%;
+  top: 13%;
+  width: 48%;
+  height: 77%;
+  object-fit: contain;
+  filter: drop-shadow(16px 23px 16px #0005);
+  transform: rotate(-5deg);
+  z-index: 2;
+  pointer-events: none;
+  animation: shirt-arrive 0.35s ease-out;
+}
+.hero-story {
+  position: absolute;
+  left: 4%;
+  bottom: 124px;
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+  max-width: 370px;
+  z-index: 3;
+}
+.story-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 100px;
+  flex-shrink: 0;
+  background: var(--hero-badge);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 44px;
+  font-style: italic;
+  transform: rotate(-6deg);
+  border: 1px solid #ffffff25;
+}
+.hero-story .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1.3px;
+  color: var(--text-hero-meta);
+}
+.hero-story h2 {
+  font-size: 17px;
+  margin: var(--space-2) 0;
+}
+.hero-story p:last-child {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--text-hero-body);
+}
+.hero-description {
+  position: absolute;
+  right: 4%;
+  bottom: 124px;
+  width: 230px;
+  z-index: 3;
+}
+.hero-description > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--text-hero-body);
+  margin-bottom: var(--space-6);
+}
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  right: 4%;
+  min-height: 80px;
+  border-top: 1px solid #ffffff26;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: 10px;
+  letter-spacing: 1px;
+  z-index: 4;
+}
+.hero-bottom > a,
+.hero-scroll {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+.hero-scroll {
+  font-size: 8px;
+  color: var(--text-hero-secondary);
+}
+.hero-controls {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+.hero-controls > button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff55;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.hero-controls > button:hover {
+  background: #ffffff18;
+  border-color: var(--white);
+}
+.hero-controls > span {
+  font-size: 11px;
+  min-width: 48px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.hero-controls > span > span {
+  color: var(--text-hero-secondary);
+}
+@keyframes shirt-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px) rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+@media (max-width: 1000px) {
+  .hero-story {
+    max-width: 290px;
+    gap: var(--space-4);
+  }
+  .story-mark {
+    width: 64px;
+    height: 80px;
+    font-size: 34px;
+  }
+  .hero-story h2 {
+    font-size: 15px;
+  }
+  .hero-story p:last-child {
+    font-size: 10px;
+  }
+  .hero-description {
+    width: 190px;
+  }
+  .hero-description > p {
+    font-size: 11px;
+  }
+  .hero-shirt {
+    left: 24%;
+    width: 57%;
+  }
+  .hero h1 {
+    font-size: 25vw;
+  }
+}
+@media (max-width: 600px) {
+  .site-header--overlay {
+    height: 72px;
+  }
+  .site-header--overlay .main-nav {
+    background: var(--ink);
+    border-color: #ffffff25;
+  }
+  .hero {
+    height: 100svh;
+    min-height: 760px;
+    padding: 96px 6% 0;
+  }
+  .hero-top {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .hero-team {
+    top: 146px;
+    left: 6%;
+    font-size: 9px;
+    gap: var(--space-2);
+  }
+  .hero-team small {
+    font-size: 6px;
+  }
+  .team-emblem {
+    width: 27px;
+    height: 33px;
+    font-size: 17px;
+  }
+  .hero-kicker {
+    top: 27%;
+    left: 6%;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .hero h1 {
+    font-size: 25vw;
+    top: 31%;
+    left: 5%;
+    letter-spacing: -1px;
+  }
+  .hero-shirt {
+    left: 18%;
+    top: 21%;
+    width: 82%;
+    height: 40%;
+    transform: rotate(-5deg);
+  }
+  .hero-story {
+    left: 6%;
+    bottom: 216px;
+    max-width: 88%;
+    gap: var(--space-4);
+  }
+  .story-mark {
+    width: 64px;
+    height: 76px;
+    font-size: 34px;
+  }
+  .hero-story h2 {
+    font-size: 16px;
+  }
+  .hero-story p:last-child {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .hero-story .eyebrow {
+    font-size: 6px;
+  }
+  .hero-description {
+    left: 6%;
+    right: 6%;
+    bottom: 96px;
+    width: auto;
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+  }
+  .hero-description > p {
+    font-size: 10px;
+    line-height: 1.7;
+    max-width: 48%;
+    margin: 0;
+    flex: 1;
+  }
+  .hero-description .button {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .hero-bottom {
+    left: 6%;
+    right: 6%;
+    min-height: 68px;
+    gap: var(--space-3);
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+  .hero-bottom > a {
+    gap: var(--space-2);
+  }
+  .hero-scroll {
+    display: none;
+  }
+  .hero-controls {
+    gap: var(--space-2);
+  }
+  .hero-controls > button {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-controls > span {
+    font-size: 9px;
+    min-width: 36px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-shirt {
+    animation: none;
+  }
+}

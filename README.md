@@ -37,6 +37,7 @@ The output is `dist`. Upload its contents to a static host when ready. Browser-h
 ## Demo behavior
 
 - English initially; select EN, PT or ES in the header. The locale and bag survive reloads.
+- The homepage fills the first viewport with an immersive hero and overlaid navigation. Use the previous/next controls to switch between Liverpool, Barcelona and Brazil; the product link follows the selected shirt. Switching is manual, with no automatic rotation.
 - USD in every locale, final prices, free delivery and a maximum of five units per shirt/size combination.
 - Unavailable sizes cannot be selected. Another size of the same shirt creates a separate bag line.
 - Required shipping fields: full name, email, country, city and address. Phone and postal code are optional. The example button fills a valid form.
@@ -47,7 +48,7 @@ The output is `dist`. Upload its contents to a static host when ready. Browser-h
 
 The supplied reference is retained with the [accepted specification](.scratch/jerskits-mvp/spec.md). The implementation follows its clear navigation, dark Liverpool feature, oversized typography and restrained product layouts; unreadable screens are completed in the same style.
 
-Product-photo source URLs, credits and verified kit seasons are recorded in `src/catalog/assets.json`. The displayed prices are demo values. Local fonts are Urbanist and Bebas Neue, supplied through Fontsource. Brand names identify the example products; this is an independent concept.
+Product-photo source URLs, credits and verified kit seasons are recorded in `src/catalog/assets.json`; additional transparent hero images are credited in `src/catalog/hero-assets.json`. The displayed prices are demo values. Local fonts are Urbanist and Bebas Neue, supplied through Fontsource. Brand names identify the example products; this is an independent concept.
 
 ## Structure
 
