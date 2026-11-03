@@ -63,3 +63,5 @@ Resumen por eje: Standards, tres hallazgos no bloqueantes resueltos; Spec, un ha
 ## Nombre completo junto a la camiseta
 
 Tras la entrevista, se acordó que ninguna letra quedara oculta: bloques compactos completos a los lados en escritorio y nombre entero encima en pantallas estrechas. El [acuerdo aceptado](hero-title-design.md) y la [revisión de esta corrección](hero-title-review.md) registran la decisión, el P2 horizontal resuelto y la evidencia. La suite completa actual contiene **34 pruebas aprobadas**. Las capturas de escritorio y móvil enlazadas arriba muestran esta versión.
+
+Después de ver esa versión, el usuario pidió acercar los bloques al contorno y permitir un leve solapamiento de las letras centrales, con un poco más de espacio entre letras. El acuerdo y las pruebas recogen esta modificación posterior; ambas revisiones la aprobaron sin hallazgos materiales.

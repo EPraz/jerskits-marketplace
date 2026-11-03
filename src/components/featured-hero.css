@@ -135,12 +135,11 @@
 }
 .hero-title-parts {
   display: grid;
-  /* The rotated assets occupy at most 66% of their square image. Reserve
-     a slightly wider middle column, centered on the unchanged shirt. */
+  /* Tuck only the middle-facing letter edges just behind the shirt. */
   grid-template-columns:
-    minmax(0, 1fr) calc(var(--hero-shirt-size) * 0.68)
+    minmax(0, 1fr) calc(var(--hero-shirt-size) * 0.56)
     minmax(0, 1fr);
-  gap: clamp(12px, 1.25vw, 24px);
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 .hero-title-parts > :first-child {

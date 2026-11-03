@@ -21,12 +21,22 @@ async function visibleComposition(page: Page, team: string) {
         range.selectNodeContents(node);
         const rect = range.getBoundingClientRect();
         if (rect.width && rect.height) {
+          const start = node.textContent.search(/\S/);
+          const end = node.textContent.trimEnd().length;
+          range.setStart(node, start);
+          range.setEnd(node, start + 1);
+          const firstLetterWidth = range.getBoundingClientRect().width;
+          range.setStart(node, end - 1);
+          range.setEnd(node, end);
+          const lastLetterWidth = range.getBoundingClientRect().width;
           words.push({
             text: node.textContent.trim(),
             left: rect.left,
             right: rect.right,
             top: rect.top,
             bottom: rect.bottom,
+            firstLetterWidth,
+            lastLetterWidth,
           });
         }
       }
@@ -78,7 +88,7 @@ async function visibleComposition(page: Page, team: string) {
   );
 }
 
-test("a guest can read both complete name blocks beside every featured shirt", async ({
+test("a guest recognizes name blocks tucked closely against each featured shirt", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -98,14 +108,19 @@ test("a guest can read both complete name blocks beside every featured shirt", a
       const { words, shirt } = await visibleComposition(page, team);
       expect(words.map((word) => word.text)).toEqual(parts);
       expect(words[0].left).toBeGreaterThanOrEqual(0);
-      expect(
-        words[0].right,
-        `${team}: left block must clear the shirt`,
-      ).toBeLessThanOrEqual(shirt.left);
-      expect(
-        words[1].left,
-        `${team}: right block must clear the shirt`,
-      ).toBeGreaterThanOrEqual(shirt.right);
+      for (const [side, gap, letterWidth] of [
+        ["left", shirt.left - words[0].right, words[0].lastLetterWidth],
+        ["right", words[1].left - shirt.right, words[1].firstLetterWidth],
+      ] as const) {
+        expect(
+          gap,
+          `${team}: ${side} block must sit close to the shirt`,
+        ).toBeLessThanOrEqual(letterWidth * 0.25);
+        expect(
+          gap,
+          `${team}: at least half of the inner letter must remain visible`,
+        ).toBeGreaterThanOrEqual(-letterWidth * 0.5);
+      }
       expect(words[1].right).toBeLessThanOrEqual(viewport.width);
       await page
         .getByRole("button", { name: "Next shirt", exact: true })

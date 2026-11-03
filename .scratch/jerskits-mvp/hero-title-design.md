@@ -5,17 +5,18 @@ Estado: acuerdo completo aceptado por el usuario; implementado y verificado.
 ## Decisiones confirmadas
 
 - El nombre real del equipo debe poder leerse completo en todas las camisetas destacadas.
-- En la composición con dos bloques, cada bloque queda visible a un lado de la camiseta: `LIVER [camiseta] POOL`. La camiseta no puede ocultar ninguna letra.
+- En la composición con dos bloques, cada bloque queda a un lado de la camiseta: `LIVER [camiseta] POOL`. Tras ver la primera versión completa, el usuario pidió acercar los bloques hasta que los bordes de la R y la P pasen apenas detrás de la camiseta, con el mismo criterio para los otros equipos.
+- En el último refinamiento, el usuario aprobó esa dirección y pidió mover ambos bloques un poco más hacia dentro, como si las letras centrales salieran de detrás de las mangas, conservando el espaciado entre letras.
 - En la composición lateral, mantener el tamaño y la posición actuales de la camiseta.
 - El espaciado se adapta al tamaño de pantalla. El usuario delega el ajuste visual al agente; no se ha acordado una distancia fija.
-- Mantener las letras compactas dentro de cada bloque, sin distribuirlas a todo el ancho ni deformarlas. Dejar un pequeño margen entre cada bloque y la camiseta.
+- Abrir ligeramente el espacio entre letras dentro de cada bloque, sin distribuirlas a todo el ancho ni deformarlas. Reducir el hueco central hasta el contorno de la camiseta.
 - Divisiones aprobadas: `LIVER [camiseta] POOL`, `BARCE [camiseta] LONA` y `BRA [camiseta] ZIL`.
 - Cuando no quepan los bloques laterales completos y legibles, mostrar el nombre completo en una línea encima de la camiseta. Se permite ajustar la composición móvil, incluida la posición de la camiseta, para lograrlo.
 
 ## Criterios de aceptación
 
-- Las letras de ambos bloques son visibles íntegramente; estar detrás de la camiseta como capa no autoriza a ocultar ninguna letra.
-- El hueco central reserva el espacio visual que ocupa la camiseta a la altura del nombre, más un pequeño margen. No se resuelve simplemente añadiendo un hueco fijo al texto centrado.
+- El nombre sigue siendo reconocible y solo se permite un leve solapamiento en el borde de las letras centrales. Esta petición posterior sustituye al requisito anterior de no ocultar ninguna parte de las letras.
+- El hueco central sigue la escala de la camiseta, permitiendo ese pequeño solapamiento. No se resuelve simplemente añadiendo un hueco fijo al texto centrado.
 - El nombre no tiene que llegar hasta las esquinas ni llenar el ancho de la pantalla.
 - En móvil, el nombre completo queda separado de la camiseta y de los demás textos, sin recortes ni desbordamiento horizontal.
 - La composición conserva la portada en el primer viewport, con las flechas y el enlace a la camiseta visibles, y mantiene el menú transparente.
@@ -29,13 +30,13 @@ Estado: acuerdo completo aceptado por el usuario; implementado y verificado.
 
 ## Resultado
 
-- En escritorio, los bloques reservan el espacio de la silueta y se mantienen completamente visibles. En pantallas estrechas, el nombre se presenta entero encima de la camiseta.
+- En escritorio, los bloques se acercan a la silueta con un leve solapamiento de las letras centrales y un poco más de espacio entre letras. En pantallas estrechas, el nombre sigue entero encima de la camiseta.
 - En móvil horizontal de poca altura, nombre completo arriba y camiseta y enlace de compra en columnas separadas, con cabecera y controles compactos.
 - Tipos y build correctos; suite completa de 34 pruebas aprobadas, incluyendo regresiones de distribución en las tres camisetas y controles dentro del viewport.
 - [Revisión y evidencia](hero-title-review.md).
 
 ## Problema de las versiones anteriores
 
-Distribuir letras a todo el ancho produjo demasiado espacio entre ellas. Agruparlas con un hueco central fijo tampoco resolvió el objetivo: la camiseta siguió ocultando letras. La siguiente implementación debe reservar espacio para la camiseta y los bloques completos, en lugar de aceptar su superposición visual.
+Distribuir letras a todo el ancho produjo demasiado espacio entre ellas. Agruparlas con un hueco central fijo ocultó demasiadas letras. Reservar después la silueta completa con un margen adicional dejó los bloques demasiado separados; la petición más reciente permite acercar solo sus bordes centrales ligeramente detrás de la camiseta.
 
 Esta es una decisión visual reversible; no requiere un ADR ni introduce términos nuevos del dominio comercial en el glosario.
