@@ -1,5 +1,57 @@
 import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
+import type { Locator } from "@playwright/test";
+
+test("a guest completes a purchase using only the keyboard", async ({
+  page,
+}) => {
+  async function tabTo(target: Locator) {
+    for (let step = 0; step < 80; step++) {
+      if (
+        await target.evaluate((element) => element === document.activeElement)
+      )
+        return;
+      await page.keyboard.press("Tab");
+    }
+    throw new Error("The control was not reachable using Tab");
+  }
+  async function activate(target: Locator) {
+    await tabTo(target);
+    await page.keyboard.press("Enter");
+  }
+  await page.goto("/");
+  await activate(page.getByRole("link", { name: "Explore the collection" }));
+  await expect(
+    page.getByRole("heading", { name: "The collection", exact: true }),
+  ).toBeVisible();
+  await activate(page.getByRole("link", { name: /^Liverpool Home Shirt/ }));
+  await expect(
+    page.getByRole("heading", { name: "Liverpool Home Shirt" }),
+  ).toBeVisible();
+  await activate(page.getByRole("button", { name: "M", exact: true }));
+  await activate(page.getByRole("button", { name: "Add to bag", exact: true }));
+  await activate(page.getByRole("link", { name: "View bag", exact: true }));
+  const quantity = page.getByRole("spinbutton", {
+    name: "Quantity for Liverpool M",
+  });
+  await tabTo(quantity);
+  await page.keyboard.press("ControlOrMeta+A");
+  await page.keyboard.type("2");
+  await expect(
+    page.getByRole("region", { name: "Order summary" }),
+  ).toContainText("$180.00");
+  await activate(page.getByRole("link", { name: "Continue to checkout" }));
+  await activate(page.getByRole("button", { name: "Confirm demo order" }));
+  await expect(
+    page.getByRole("textbox", { name: "Full name", exact: true }),
+  ).toBeFocused();
+  await expect(page.getByText("Full name is required.")).toBeVisible();
+  await activate(page.getByRole("button", { name: "Fill demo details" }));
+  await activate(page.getByRole("button", { name: "Confirm demo order" }));
+  await expect(
+    page.getByRole("heading", { name: "You’re in the lineup." }),
+  ).toBeVisible();
+});
 
 test("the discovery and purchase screens meet accessibility checks", async ({
   page,
