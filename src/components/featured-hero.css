@@ -116,14 +116,20 @@
 }
 .hero h1 {
   position: absolute;
-  left: 3.5%;
+  left: 4%;
+  right: 4%;
   top: 40%;
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(120px, 24vw, 400px);
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: 0;
   line-height: 0.9;
-  width: 95%;
+  z-index: 1;
+}
+.hero-title-letters {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
 }
 .hero-shirt {
   position: absolute;
@@ -325,8 +331,8 @@
   .hero h1 {
     font-size: 25vw;
     top: 31%;
-    left: 5%;
-    letter-spacing: -1px;
+    left: 6%;
+    right: 6%;
   }
   .hero-shirt {
     left: 18%;

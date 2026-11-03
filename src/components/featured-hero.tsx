@@ -68,8 +68,17 @@ export function FeaturedHero() {
       <p className="hero-kicker">
         {t("official")} · {product.season}
       </p>
-      <h1 id="hero-title" aria-live="polite" aria-atomic="true">
-        {product.team.toUpperCase()}
+      <h1
+        id="hero-title"
+        aria-label={product.team.toUpperCase()}
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <span className="hero-title-letters" aria-hidden="true">
+          {Array.from(product.team.toUpperCase()).map((letter, index) => (
+            <span key={index}>{letter}</span>
+          ))}
+        </span>
       </h1>
       <img
         key={slide.id}
