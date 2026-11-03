@@ -122,13 +122,14 @@
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(120px, 24vw, 400px);
   font-weight: 400;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   line-height: 0.9;
   z-index: 1;
 }
-.hero-title-letters {
+.hero-title-parts {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: clamp(24px, min(10vw, 20svh), 180px);
   white-space: nowrap;
 }
 .hero-shirt {

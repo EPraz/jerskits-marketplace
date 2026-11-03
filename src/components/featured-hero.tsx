@@ -12,6 +12,7 @@ const slides = [
     club: "LIVERPOOL FC",
     motto: "YOU’LL NEVER WALK ALONE",
     tone: "liverpool",
+    titleParts: ["LIVER", "POOL"],
   },
   {
     id: "barcelona-home",
@@ -20,6 +21,7 @@ const slides = [
     club: "FC BARCELONA",
     motto: "MÉS QUE UN CLUB",
     tone: "barcelona",
+    titleParts: ["BARCE", "LONA"],
   },
   {
     id: "brazil-home",
@@ -28,6 +30,7 @@ const slides = [
     club: "BRASIL",
     motto: "ORDEM E PROGRESSO",
     tone: "brazil",
+    titleParts: ["BRA", "ZIL"],
   },
 ] as const;
 
@@ -74,9 +77,9 @@ export function FeaturedHero() {
         aria-live="polite"
         aria-atomic="true"
       >
-        <span className="hero-title-letters" aria-hidden="true">
-          {Array.from(product.team.toUpperCase()).map((letter, index) => (
-            <span key={index}>{letter}</span>
+        <span className="hero-title-parts" aria-hidden="true">
+          {slide.titleParts.map((part) => (
+            <span key={part}>{part}</span>
           ))}
         </span>
       </h1>
