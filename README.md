@@ -38,7 +38,7 @@ npm run build
 npm run preview
 ```
 
-The output is `dist`. The public demo is hosted on Vercel from the public repository's `main` branch. Automatic deployments are awaiting the owner's GitHub integration grant for this new repository; the reviewed production release is already live. `vercel.json` configures the SPA rewrite, so direct entry and refresh work on shirt pages, checkout and `/walkthrough`. A `_redirects` file is also included for other hosts that support that convention.
+The output is `dist`. The public demo is hosted on Vercel, connected to the public GitHub repository with automatic production deployments from `main`. `vercel.json` configures the SPA rewrite, so direct entry and refresh work on shirt pages, checkout and `/walkthrough`. A `_redirects` file is also included for other hosts that support that convention.
 
 ## Demo behavior
 

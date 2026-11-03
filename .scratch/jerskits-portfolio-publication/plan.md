@@ -1,6 +1,6 @@
 # Walkthrough y publicación de Jerskits
 
-Estado: video, reproductor, README, repositorio público y demo de Vercel publicados y verificados. Pendiente únicamente el permiso de la integración de GitHub para desplegar automáticamente desde `main`.
+Estado: video, reproductor, README, repositorio público y demo de Vercel publicados y verificados. El propietario habilitó el acceso de la App de Vercel y el repositorio quedó conectado para desplegar automáticamente desde `main`.
 
 ## Objetivo confirmado
 
@@ -15,7 +15,7 @@ Estado: video, reproductor, README, repositorio público y demo de Vercel public
 - Los ejemplos públicos examinados usan subdominios generados `.vercel.app`, sin una convención de dominio propio.
 - Las herramientas reutilizables de grabación y montaje están en `coffee-shop-app/scripts/walkthrough/` y `ER-LandigPage/scripts/walkthrough/`. Se revisarán para adaptar el guion a Jerskits, sin modificar esos repositorios.
 
-## Situación actual de Jerskits
+## Situación de Jerskits al iniciar este trabajo
 
 - README en inglés; no contiene aún video ni enlace a demo pública.
 - Repositorio Git local sin remotos configurados.
