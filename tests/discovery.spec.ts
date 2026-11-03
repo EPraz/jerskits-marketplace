@@ -1,5 +1,24 @@
 import { test, expect } from "./fixtures";
 
+test("featured actions fit within short first viewports", async ({ page }) => {
+  for (const viewport of [
+    { width: 390, height: 667 },
+    { width: 320, height: 568 },
+    { width: 1440, height: 600 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.goto("/");
+    for (const name of ["Previous shirt", "Next shirt"]) {
+      await expect(
+        page.getByRole("button", { name, exact: true }),
+      ).toBeInViewport({ ratio: 1 });
+    }
+    await expect(
+      page.getByRole("link", { name: "Shop this shirt", exact: true }),
+    ).toBeInViewport({ ratio: 1 });
+  }
+});
+
 test("a guest switches featured shirts and opens the selected product", async ({
   page,
 }) => {

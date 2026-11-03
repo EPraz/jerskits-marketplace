@@ -24,7 +24,6 @@
   --hero-badge: #a71c2b;
   --hero-shade: #232e34;
   height: 100svh;
-  min-height: 640px;
   background: var(--surface-hero);
   color: var(--white);
   position: relative;
@@ -297,7 +296,6 @@
   }
   .hero {
     height: 100svh;
-    min-height: 760px;
     padding: 96px 6% 0;
   }
   .hero-top {
@@ -404,6 +402,69 @@
   .hero-controls > span {
     font-size: 9px;
     min-width: 36px;
+  }
+}
+@media (min-width: 601px) and (max-height: 740px) {
+  .hero {
+    padding-top: 96px;
+  }
+  .hero-team {
+    top: 26%;
+  }
+  .hero h1 {
+    top: 38%;
+    font-size: min(24vw, 30svh);
+  }
+  .hero-story {
+    bottom: 100px;
+    max-width: 320px;
+    gap: var(--space-4);
+  }
+  .story-mark {
+    width: 64px;
+    height: 72px;
+    font-size: 34px;
+  }
+  .hero-story p:last-child {
+    font-size: 10px;
+  }
+  .hero-description {
+    bottom: 100px;
+  }
+  .hero-description > p {
+    margin-bottom: var(--space-4);
+  }
+}
+@media (max-width: 600px) and (max-height: 740px) {
+  .hero-team {
+    top: 132px;
+  }
+  .hero-story {
+    bottom: 180px;
+  }
+  .story-mark {
+    height: 64px;
+  }
+}
+@media (max-width: 600px) and (max-height: 620px) {
+  .hero-team {
+    top: 126px;
+  }
+  .hero-kicker {
+    top: 29%;
+  }
+  .hero h1 {
+    top: 33%;
+  }
+  .hero-shirt {
+    top: 22%;
+    height: 47%;
+  }
+  .hero-story {
+    display: none;
+  }
+  .hero-description {
+    bottom: 84px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
