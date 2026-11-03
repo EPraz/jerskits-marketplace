@@ -15,6 +15,7 @@ export function Layout() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const isCatalog = location.pathname === "/catalog";
+  const isCompact = isCatalog || location.pathname === "/walkthrough";
   const firstVisit = useRef(true);
   useEffect(() => {
     setMenuOpen(false);
@@ -36,7 +37,7 @@ export function Layout() {
       {!isHome && (
         <div
           className={
-            isCatalog ? "announcement announcement--compact" : "announcement"
+            isCompact ? "announcement announcement--compact" : "announcement"
           }
         >
           <span>{t("tagline")}</span>
@@ -45,7 +46,7 @@ export function Layout() {
         </div>
       )}
       <header
-        className={`site-header${isHome ? " site-header--overlay" : isCatalog ? " site-header--compact" : ""}`}
+        className={`site-header${isHome ? " site-header--overlay" : isCompact ? " site-header--compact" : ""}`}
       >
         <button
           className="icon-button mobile-menu"
@@ -110,6 +111,7 @@ export function Layout() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Jerskits.</span>
           <span>{t("copyright")}</span>
+          <Link to="/walkthrough">{t("watchFilm")}</Link>
           <ResetDemo />
         </div>
       </footer>

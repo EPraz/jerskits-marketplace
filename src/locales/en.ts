@@ -1,4 +1,13 @@
 export const en = {
+  watchFilm: "Watch the film",
+  filmTitle: "The game. In motion.",
+  filmIntro:
+    "The shirts, the details, the beautiful game. A 35-second look at Jerskits.",
+  filmFormat: "0:35 · 1080p · No audio · English captions available",
+  downloadFilm: "Download MP4",
+  filmChapters: "Scenes",
+  filmTranscript: "Transcript (English)",
+  exploreStore: "Explore Jerskits",
   previousShirt: "Previous shirt",
   nextShirt: "Next shirt",
   featuredControls: "Featured shirt controls",

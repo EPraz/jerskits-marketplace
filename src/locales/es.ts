@@ -1,6 +1,15 @@
 import type { en } from "./en";
 
 export const es: Record<keyof typeof en, string> = {
+  watchFilm: "Ver el video",
+  filmTitle: "El juego. En movimiento.",
+  filmIntro:
+    "Las camisetas, los detalles, el fútbol. Una mirada a Jerskits en 35 segundos.",
+  filmFormat: "0:35 · 1080p · Sin audio · Subtítulos en inglés disponibles",
+  downloadFilm: "Descargar MP4",
+  filmChapters: "Escenas",
+  filmTranscript: "Transcripción (inglés)",
+  exploreStore: "Explorar Jerskits",
   previousShirt: "Camiseta anterior",
   nextShirt: "Siguiente camiseta",
   featuredControls: "Controles de camisetas destacadas",

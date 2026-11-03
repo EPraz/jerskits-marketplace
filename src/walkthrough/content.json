@@ -1,0 +1,30 @@
+{
+  "duration": 35,
+  "durationLabel": "0:35",
+  "chapters": [
+    {
+      "id": "hero",
+      "start": 0,
+      "title": "The shirts",
+      "caption": "Liverpool, Barcelona and Brazil in the immersive desktop collection."
+    },
+    {
+      "id": "collection",
+      "start": 12,
+      "title": "Find your colors",
+      "caption": "Browse the collection and explore the details of the Liverpool home shirt."
+    },
+    {
+      "id": "mobile",
+      "start": 21,
+      "title": "The game goes with you",
+      "caption": "The same collection, explored in a real mobile viewport."
+    },
+    {
+      "id": "closing",
+      "start": 30,
+      "title": "Jerskits",
+      "caption": "Football, worn your way. An independent portfolio concept."
+    }
+  ]
+}

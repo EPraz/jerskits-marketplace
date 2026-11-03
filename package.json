@@ -3,13 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "npm run typecheck && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "walkthrough:rehearse": "node scripts/walkthrough/record.mjs --rehearsal",
+    "walkthrough:record": "node scripts/walkthrough/record.mjs",
+    "walkthrough:render": "python scripts/walkthrough/render.py"
   },
   "dependencies": {
     "@fontsource/bebas-neue": "^5.3.0",

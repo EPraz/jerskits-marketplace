@@ -2,6 +2,12 @@
 
 A responsive football-shirt storefront built as an independent portfolio demo. Explore 12 club and national-team shirts, select a size, manage a persistent bag and complete a simulated guest checkout. No accounts, backend or payment service.
 
+[Live demo](https://jerskits-marketplace.vercel.app) · [Watch the 35-second film](https://jerskits-marketplace.vercel.app/walkthrough) · [Download MP4](https://jerskits-marketplace.vercel.app/walkthrough/jerskits-showcase.mp4)
+
+[![Jerskits — watch the 35-second showcase](public/walkthrough/poster.jpg)](https://jerskits-marketplace.vercel.app/walkthrough)
+
+The film is a silent visual tour of the desktop collection, shirt details and real mobile experience. [Recording and publication notes](docs/walkthrough.md).
+
 ## Run locally
 
 Tested with Node.js 24.13 and npm 11. Use the Node version in `.node-version`.
@@ -32,7 +38,7 @@ npm run build
 npm run preview
 ```
 
-The output is `dist`. Upload its contents to a static host when ready. Browser-history routes need a fallback to `index.html` for URLs that do not match a static file; otherwise refreshing a shirt or checkout link returns a host 404. A `_redirects` file for hosts that support that convention is included. On other hosts, configure the equivalent rewrite while preserving existing assets. Publication is outside this MVP.
+The output is `dist`. The public demo is hosted on Vercel, with automatic production deployments from the public repository's `main` branch. `vercel.json` configures the SPA rewrite, so direct entry and refresh work on shirt pages, checkout and `/walkthrough`. A `_redirects` file is also included for other hosts that support that convention.
 
 ## Demo behavior
 

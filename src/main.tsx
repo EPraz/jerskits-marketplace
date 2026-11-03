@@ -18,6 +18,7 @@ import { Home } from "./pages/home";
 import { Catalog } from "./pages/catalog";
 import { ProductPage, NotFound } from "./pages/product";
 import { CartProvider } from "./store/cart";
+import { Walkthrough } from "./walkthrough/walkthrough";
 import { CartPage } from "./pages/cart";
 import { CheckoutPage, ConfirmationPage } from "./pages/checkout";
 
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")!).render(
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="catalog" element={<Catalog />} />
+          <Route path="walkthrough" element={<Walkthrough />} />
           <Route path="shirts/:id" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<CheckoutPage />} />

@@ -3,7 +3,11 @@ dist/
 test-results/
 playwright-report/
 .local/
+.vercel/
 *.log
 .env
 .env.*
 !.env.example
+
+.vercel
+.env*
