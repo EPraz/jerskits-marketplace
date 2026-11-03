@@ -124,6 +124,8 @@ test("a guest reads the complete name above the shirt on narrow screens", async 
     { width: 390, height: 844 },
     { width: 768, height: 900 },
     { width: 768, height: 600 },
+    { width: 568, height: 320 },
+    { width: 844, height: 390 },
   ]) {
     await page.setViewportSize(viewport);
     await page.goto("/");
@@ -132,6 +134,10 @@ test("a guest reads the complete name above the shirt on narrow screens", async 
       expect(words.map((word) => word.text)).toEqual([team]);
       expect(words[0].left).toBeGreaterThanOrEqual(0);
       expect(words[0].right).toBeLessThanOrEqual(viewport.width);
+      expect(
+        shirt.bottom - shirt.top,
+        `${team}: the shirt must remain visible`,
+      ).toBeGreaterThan(40);
       expect(
         words[0].bottom,
         `${team}: complete name must be above the shirt`,

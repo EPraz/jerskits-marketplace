@@ -522,14 +522,44 @@
     bottom: 100px;
   }
 }
-@media (min-width: 601px) and (max-width: 1000px) and (max-height: 500px) {
+@media (max-width: 1000px) and (max-height: 420px) {
+  .site-header--overlay {
+    height: 56px;
+  }
+  .site-header--overlay .main-nav {
+    top: 56px;
+  }
   .hero-top,
   .hero-team,
+  .hero-kicker,
+  .hero-story,
   .hero-description > p {
     display: none;
   }
   .hero-display {
-    top: 104px;
+    inset: 68px 6%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .hero h1 {
+    grid-column: 1 / -1;
+    font-size: min(10vw, 48px);
+  }
+  .hero-shirt {
+    grid-column: 1;
+  }
+  .hero-description {
+    left: auto;
+    right: 6%;
+    bottom: 80px;
+    width: 40%;
+    display: block;
+  }
+  .hero-bottom {
+    min-height: 56px;
+  }
+  .hero-scroll {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {

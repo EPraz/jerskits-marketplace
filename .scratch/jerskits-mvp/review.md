@@ -59,3 +59,7 @@ Resumen por eje: Standards, tres hallazgos no bloqueantes resueltos; Spec, un ha
 - Standards: ninguna regresión material; los controles conservan sus nombres accesibles, foco y comportamiento con teclado.
 - Spec: se detectó y corrigió un P2 por alturas mínimas que extendían la portada fuera del primer viewport en pantallas bajas. La composición ahora se adapta a la altura; en los móviles más bajos se omite el relato decorativo. Una prueba de regresión verifica que ambas flechas y el enlace de compra estén completamente dentro del viewport a 390×667, 320×568 y 1440×600. Las capturas de esos tamaños se revisaron visualmente.
 - Ambas revisiones independientes confirmaron el cierre sin hallazgos materiales pendientes.
+
+## Nombre completo junto a la camiseta
+
+Tras la entrevista, se acordó que ninguna letra quedara oculta: bloques compactos completos a los lados en escritorio y nombre entero encima en pantallas estrechas. El [acuerdo aceptado](hero-title-design.md) y la [revisión de esta corrección](hero-title-review.md) registran la decisión, el P2 horizontal resuelto y la evidencia. La suite completa actual contiene **34 pruebas aprobadas**. Las capturas de escritorio y móvil enlazadas arriba muestran esta versión.

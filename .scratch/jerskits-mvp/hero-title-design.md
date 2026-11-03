@@ -1,6 +1,6 @@
 # Nombre del equipo en la portada
 
-Estado: acuerdo completo aceptado por el usuario; implementación autorizada.
+Estado: acuerdo completo aceptado por el usuario; implementado y verificado.
 
 ## Decisiones confirmadas
 
@@ -26,6 +26,13 @@ Estado: acuerdo completo aceptado por el usuario; implementación autorizada.
 - Usar el límite ya acordado para las pruebas: la interfaz completa en un navegador real, sin nuevas pruebas de componentes ni acceso al estado interno.
 - Verificar la posición visible de las letras respecto a los píxeles opacos de la camiseta, además del nombre accesible, el ajuste al viewport y los controles existentes.
 - Comparar la implementación con el estado inicial `1220215` y revisar por separado Standards y Spec.
+
+## Resultado
+
+- En escritorio, los bloques reservan el espacio de la silueta y se mantienen completamente visibles. En pantallas estrechas, el nombre se presenta entero encima de la camiseta.
+- En móvil horizontal de poca altura, nombre completo arriba y camiseta y enlace de compra en columnas separadas, con cabecera y controles compactos.
+- Tipos y build correctos; suite completa de 34 pruebas aprobadas, incluyendo regresiones de distribución en las tres camisetas y controles dentro del viewport.
+- [Revisión y evidencia](hero-title-review.md).
 
 ## Problema de las versiones anteriores
 
